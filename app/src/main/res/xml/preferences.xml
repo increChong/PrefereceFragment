@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory android:title="In-line preferences">
+    <CheckBoxPreference
+        android:key="checkbox"
+        android:title="CheckBoxPreference"
+        android:summaryOn="开启"
+        android:summaryOff="关闭"/>
+</PreferenceCategory>
+    <PreferenceCategory android:title="Dialog-based preferences">
+        <EditTextPreference
+            android:key="edit"
+            android:title="EditTextPreference"
+            android:summary="使用 edit text dialog"
+            android:dialogTitle="输入文字"/>
+        <ListPreference
+            android:title="ListPreference"
+            android:key="list"
+            android:dialogTitle="Choose one"
+            android:summary="使用 list dialog"
+           android:entries="@array/name_list"
+            android:entryValues="@array/values_list">
+        </ListPreference>
+    </PreferenceCategory>
+<PreferenceCategory android:title="Launch preferences">
+    <PreferenceScreen
+        android:title="Screen preference"
+        android:summary="show other screen of preference">  <CheckBoxPreference
+        android:title="Toggle Preference"
+        android:summary="Preferences that is on the next screen but same hierarchy" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Intenet preferences"
+        android:summary="Launches an Activity from an Intent">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://www.baidu.com"/>
+    </PreferenceScreen>
+</PreferenceCategory>
+    <PreferenceCategory android:title="Preferences attributes">
+        <CheckBoxPreference
+            android:key="parent_checkbox"
+            android:title="Parent checkbox preference"
+            android:summary="This is visually a parent" />
+        <CheckBoxPreference
+            android:dependency="parent_checkbox"
+            android:title="Child checkbox preference"
+            android:summary="This is visually a child" />
+    </PreferenceCategory>
+</PreferenceScreen>
