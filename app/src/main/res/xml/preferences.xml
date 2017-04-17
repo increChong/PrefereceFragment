@@ -25,7 +25,8 @@
 <PreferenceCategory android:title="Launch preferences">
     <PreferenceScreen
         android:title="Screen preference"
-        android:summary="show other screen of preference">  <CheckBoxPreference
+        android:summary="show other screen of preference">  
+    <CheckBoxPreference
         android:title="Toggle Preference"
         android:summary="Preferences that is on the next screen but same hierarchy" />
     </PreferenceScreen>
